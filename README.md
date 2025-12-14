@@ -18,7 +18,8 @@ It provides a fast and flexible way to copy sanitized requests during pentesting
       Masks sensitive parameters in:
       <ul>
         <li>URL query</li>
-        <li>Body parameters</li>
+        <li>Body parameters (x-www-form-urlencoded)</li>
+        <li>JSON bodies (recursive key-based sanitization)</li>
       </ul>
       Users can define which parameter names should be masked.
   </li>
@@ -27,15 +28,22 @@ It provides a fast and flexible way to copy sanitized requests during pentesting
       Produces a fully redacted request suitable for sending in tickets, Slack, or documentation without leaking secrets.
   </li>
 
+  <li><strong>JSON body handling</strong><br>
+      Supports sanitizing nested JSON structures and formatting JSON bodies for improved readability (jq-style pretty-printing optional).
+  </li>
+
   <li><strong>Dedicated UI panels</strong> to manage:
       <ul>
         <li>Sensitive headers list</li>
-        <li>Parameter names for masking</li>
+        <li>Parameter names for redaction and masking</li>
         <li>Redact/mask placeholders</li>
+        <li>JSON formatting toggle (Include JSON format copying)</li>
       </ul>
   </li>
 
-  <li><strong>Clean, fast, minimal GUI</strong></li>
+  <li><strong>Clean, fast, minimal GUI</strong><br>
+      Optimized for efficient pentesting workflows, reporting, and secure sharing.
+  </li>
 </ul>
 
 <h3>How to use the extension</h3>
